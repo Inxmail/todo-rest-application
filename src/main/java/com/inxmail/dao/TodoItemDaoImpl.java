@@ -21,4 +21,13 @@ public class TodoItemDaoImpl implements TodoItemDao {
     public List<TodoItem> getAll() {
         return jdbcTemplate.query("SELECT * FROM todo_items", new BeanPropertyRowMapper<>(TodoItem.class));
     }
+
+
+    @Override
+    public TodoItem getByDescription( String description )
+    {
+        Object[] params = List.of( description ).toArray();
+        return jdbcTemplate.queryForObject( "SELECT * FROM todo_items WHERE description = ?", params, new BeanPropertyRowMapper<>(TodoItem.class) );
+    }
+
 }
