@@ -27,7 +27,8 @@ public class TodoItemServiceImpl implements TodoItemService {
     }
 
     @Override
-    public TodoItemResponse getByDescription(String description) {
+    public TodoItemResponse getByDescription(String description )
+    {
         return mapper.toResponse( dao.getByDescription(description));
     }
 }
