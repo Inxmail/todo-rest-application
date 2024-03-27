@@ -28,7 +28,7 @@ public class TodoItemController {
         return ResponseEntity.ok(service.getAll());
     }
 
-    @GetMapping("byDescription/{description}")
+    @GetMapping("byDescription/{description}" )
     public ResponseEntity<TodoItemResponse> getByDescription(@PathVariable String description) {
         return ResponseEntity.ok( service.getByDescription( description ) );
     }
