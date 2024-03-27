@@ -8,4 +8,6 @@ import com.inxmail.rest.dto.TodoItemResponse;
 public interface TodoItemService {
 
     List<TodoItemResponse> getAll();
+
+    TodoItemResponse getByDescription(String description);
 }
