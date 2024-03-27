@@ -1,16 +1,18 @@
-package com.inxmail.todoapp.rest;
-
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+package com.inxmail.rest;
 
 import java.util.List;
 
-import com.inxmail.todoapp.rest.dto.TodoItemResponse;
-import com.inxmail.todoapp.service.TodoItemService;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.inxmail.rest.dto.TodoItemResponse;
+import com.inxmail.service.TodoItemService;
 
 
-@RestController("todo/v1/items")
+@RestController()
+@RequestMapping("todo/v1/items")
 public class TodoItemController {
 
     private final TodoItemService service;

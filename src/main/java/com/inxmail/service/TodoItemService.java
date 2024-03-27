@@ -1,8 +1,8 @@
-package com.inxmail.todoapp.service;
+package com.inxmail.service;
 
 import java.util.List;
 
-import com.inxmail.todo.rest.dto.TodoItemResponse;
+import com.inxmail.rest.dto.TodoItemResponse;
 
 
 public interface TodoItemService {

@@ -1,13 +1,14 @@
-package com.inxmail.todoapp.dao;
+package com.inxmail.dao;
 
 import java.util.List;
 
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
 
-import com.inxmail.todoapp.entity.TodoItem;
+import com.inxmail.entity.TodoItem;
 
-
+@Component
 public class TodoItemDaoImpl implements TodoItemDao {
 
     private final JdbcTemplate jdbcTemplate;

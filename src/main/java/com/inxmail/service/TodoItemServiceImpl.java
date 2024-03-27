@@ -1,11 +1,11 @@
-package com.inxmail.todoapp.service;
+package com.inxmail.service;
 
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.inxmail.todoapp.dao.TodoItemDao;
-import com.inxmail.todoapp.rest.dto.TodoItemResponse;
+import com.inxmail.dao.TodoItemDao;
+import com.inxmail.rest.dto.TodoItemResponse;
 
 
 @Service
@@ -21,6 +21,8 @@ public class TodoItemServiceImpl implements TodoItemService {
 
     @Override
     public List<TodoItemResponse> getAll() {
-        return dao.getAll().stream().map( todoItem -> mapper.toResponse( todoItem ) ).toList();
+        return dao.getAll().stream()
+                .map( mapper::toResponse )
+                .toList();
     }
 }
