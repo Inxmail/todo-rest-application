@@ -25,4 +25,10 @@ public class TodoItemServiceImpl implements TodoItemService {
                 .map( mapper::toResponse )
                 .toList();
     }
+
+    @Override
+    public TodoItemResponse getByDescription(String description )
+    {
+        return mapper.toResponse( dao.getByDescription(description));
+    }
 }
